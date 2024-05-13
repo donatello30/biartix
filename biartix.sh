@@ -17,7 +17,7 @@ echo root:12345 | chpasswd
  
 pacman -S grub efibootmgr networkmanager networkmanager-runit network-manager-applet linux-headers dosfstools xdg-user-dirs xdg-utils intel-ucode bluez bluez-runit bluez-utils cups cups-runit
 
-pacman -S xf86_64-video-intel xorg --ignore xorg-server-xdmx sddm sddm-runit
+#pacman -S xf86_64-video-intel xorg --ignore xorg-server-xdmx sddm sddm-runit
 
 # pacman -S --noconfirm xf86-video-amdgpu
 # pacman -S --noconfirm nvidia nvidia-utils nvidia-settings
@@ -25,7 +25,7 @@ pacman -S xf86_64-video-intel xorg --ignore xorg-server-xdmx sddm sddm-runit
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub 
 #change the directory to /boot/efi is you mounted the EFI partition at /boot/efi
 
-#grub-mkconfig -o /boot/grub/grub.cfg
+grub-mkconfig -o /boot/grub/grub.cfg
 
 #systemctl enable NetworkManager
 #systemctl enable bluetooth
