@@ -21,7 +21,7 @@ Server = https://artix.wheaton.edu/repos/$repo/os/$arch
 
 ## South America
 # Chile
-#Server = https://mirror1.cl.netactuate.com/artix/repos/$repo/os/$arch
+Server = https://mirror1.cl.netactuate.com/artix/repos/$repo/os/$arch
 
 # Canada
 Server = https://mirror.csclub.uwaterloo.ca/artixlinux/$repo/os/$arch
