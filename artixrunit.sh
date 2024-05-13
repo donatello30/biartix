@@ -1,5 +1,7 @@
 #!/bin/bash
-
+# Todo lo que sigue es despues de haber hecho el pacman -S base bae-devel runit elogind-runit y el pacman -S linux-lts linux-firmware 
+# Y el artix-chroot /mnt
+# this is for  "LANG=en_US.UTF-8":   sed -i '177s/.//' /etc/locale.gen
 ln -sf /usr/share/zoneinfo/America/Bogota /etc/localtime
 hwclock --systohc
 sed -i '185s/.//' /etc/locale.gen
