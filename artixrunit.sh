@@ -10,7 +10,7 @@ echo "redakuma" >> /etc/hostname
 echo "127.0.0.1 localhost" >> /etc/hosts
 echo "::1       localhost" >> /etc/hosts
 echo "127.0.1.1 redakuma.localdomain redakuma" >> /etc/hosts
-echo root:12345 | chpasswd
+echo root:1234 | chpasswd
 
 # You can add xorg to the installation packages, I usually add it at the DE or WM install script
 # You can remove the tlp package if you are installing on a desktop or vm
@@ -22,7 +22,7 @@ pacman -S grub efibootmgr networkmanager networkmanager-runit network-manager-ap
 # pacman -S --noconfirm xf86-video-amdgpu
 # pacman -S --noconfirm nvidia nvidia-utils nvidia-settings
 
-grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub 
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB 
 #change the directory to /boot/efi is you mounted the EFI partition at /boot/efi
 
 grub-mkconfig -o /boot/grub/grub.cfg
@@ -39,9 +39,11 @@ grub-mkconfig -o /boot/grub/grub.cfg
 #systemctl enable firewalld
 #systemctl enable acpid
 
-#useradd -mG wheel red
-#echo red:1234 | chpasswd
-
+# Create User
+useradd -m jhan
+echo jhan:123 | chpasswd
+usermod -aG wheel jhan
+echo "jhan ALL=(ALL) ALL" >> /etc/sudoers.d/jhan
 
 printf "\e[1;32mLo lograste! Type exit, umount -R /mnt and reboot.\e[0m"
 
