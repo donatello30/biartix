@@ -17,7 +17,7 @@ echo root:1234 | chpasswd
 # You can add xorg to the installation packages, I usually add it at the DE or WM install script
 # You can remove the tlp package if you are installing on a desktop or vm
  
-pacman -S grub efibootmgr networkmanager networkmanager-runit network-manager-applet linux-headers dosfstools xdg-user-dirs xdg-utils intel-ucode bluez bluez-runit bluez-utils cups cups-runit
+pacman -S grub os-prober efibootmgr networkmanager networkmanager-runit network-manager-applet linux-headers dosfstools xdg-user-dirs xdg-utils intel-ucode bluez bluez-runit bluez-utils cups cups-runit
 
 #pacman -S xf86_64-video-intel xorg --ignore xorg-server-xdmx sddm sddm-runit
 
@@ -42,12 +42,12 @@ grub-mkconfig -o /boot/grub/grub.cfg
 #systemctl enable acpid
 
 # Create User
-useradd -m jhan
-echo jhan:123 | chpasswd
-usermod -aG wheel jhan
-echo "jhan ALL=(ALL) ALL" >> /etc/sudoers.d/jhan
+#useradd -m jhan
+#echo jhan:123 | chpasswd
+#usermod -aG wheel jhan
+#echo "jhan ALL=(ALL) ALL" >> /etc/sudoers.d/jhan
 
-printf "\e[1;32mLo lograste! Type exit, umount -R /mnt and reboot.\e[0m"
+printf "\e[1;32mLo lograste! crea el usuario y password despues Type exit, umount -R /mnt and reboot.\e[0m"
 
 
 
