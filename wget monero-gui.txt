@@ -1,2 +1,0 @@
-#
-sudo wget https://downloads.getmonero.org/gui/linux64
