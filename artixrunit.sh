@@ -17,7 +17,7 @@ echo root:1234 | chpasswd
 # You can add xorg to the installation packages, I usually add it at the DE or WM install script
 # You can remove the tlp package if you are installing on a desktop or vm
  
-pacman -S grub os-prober efibootmgr networkmanager networkmanager-runit network-manager-applet linux-headers dosfstools xdg-user-dirs xdg-utils intel-ucode bluez bluez-runit bluez-utils cups cups-runit lm_sensors lm_sensors-runit
+pacman -S grub os-prober efibootmgr networkmanager networkmanager-runit network-manager-applet linux-headers dosfstools xdg-user-dirs xdg-utils intel-ucode
 
 #pacman -S xf86_64-video-intel xorg --ignore xorg-server-xdmx sddm sddm-runit
 
