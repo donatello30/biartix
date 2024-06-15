@@ -47,7 +47,7 @@ echo user:123 | chpasswd
 usermod -aG wheel user
 echo "user ALL=(ALL) ALL" >> /etc/sudoers.d/user
 
-printf "\e[1;32mLo lograste! crea el usuario y password despues Type exit, umount -R /mnt and reboot.\e[0m"
+printf "\e[1;32mLo lograste! escribe exit, y despues umount -R /mnt and reboot.\e[0m"
 
 
 # Como utilizar reflector:$  reflector --latest 10 --sort rate --save /etc/pacman.d/mirrorlist
