@@ -8,11 +8,11 @@ sed -i '185s/.//' /etc/locale.gen
 locale-gen
 echo "LANG=es_CO.UTF-8" >> /etc/locale.conf
 echo "KEYMAP=la-latin1" >> /etc/vconsole.conf
-echo "redakuma" >> /etc/hostname
+echo "hostname" >> /etc/hostname
 echo "127.0.0.1 localhost" >> /etc/hosts
 echo "::1       localhost" >> /etc/hosts
-echo "127.0.1.1 redakuma.localdomain redakuma" >> /etc/hosts
-echo root:1234 | chpasswd
+echo "127.0.1.1 hostname.localdomain hostname" >> /etc/hosts
+echo root:123| chpasswd
 
 # You can add xorg to the installation packages, I usually add it at the DE or WM install script
 # You can remove the tlp package if you are installing on a desktop or vm
@@ -42,10 +42,10 @@ grub-mkconfig -o /boot/grub/grub.cfg
 #systemctl enable acpid
 
 # Create User
-#useradd -m jhan
-#echo jhan:123 | chpasswd
-#usermod -aG wheel jhan
-#echo "jhan ALL=(ALL) ALL" >> /etc/sudoers.d/jhan
+#useradd -m user
+#echo user:123 | chpasswd
+#usermod -aG wheel user
+#echo "user ALL=(ALL) ALL" >> /etc/sudoers.d/user
 
 printf "\e[1;32mLo lograste! crea el usuario y password despues Type exit, umount -R /mnt and reboot.\e[0m"
 
